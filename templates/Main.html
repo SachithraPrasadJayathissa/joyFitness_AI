@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="#">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        
+        .testbox {
+            max-width: 700px;
+            width: 100%;
+            background-color: #fff;
+            padding: 25px 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testbox .banner {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            position: relative;
+        }
+        
+        .testbox .top-info {
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .testbox .banner::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            border-radius: 5px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        
+        .testbox form .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+        
+        form .user-details .item {
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+        }
+        
+        form .item span.required {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .user-details .item input {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            font-size: 16px;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .user-details .item input:focus,
+        .user-details .item input:valid {
+            border-color: #9b59b6;
+        }
+        
+        form input[type="radio"] {
+            display: none;
+        }
+        
+        select {
+            height: 45px;
+            width: 100%;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0);
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            outline: none;
+            border: 1px solid #ccc;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        form .button {
+            height: 45px;
+            width: 200px;
+            margin: -60px 400px;
+        }
+        
+        form .button input {
+            height: 100%;
+            width: 150%;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+        
+        form .button input:hover {
+            background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+        
+        .predVal {
+            margin-top: 8px;
+            padding: 8px;
+            height: 55px;
+            width: 500px;
+            font-size: 20px;
+        }
+        
+        .predVal::first-letter {
+            font-size: 25px;
+            text-shadow: #71b7e6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testbox">
+        <form action="/" method="POST">
+            <div class="user-details">
+                <div class="banner">
+                    <h1>WORKOUT RECOMMENDATION</h1>
+                </div>
+                <br>
+                <p class="top-info">If you want to predict your sales? so this is the best site to do that</p>
+                <br>
+                <br>
+
+                <div class="item">
+                    <p>Age<span class="required"></span></p>
+                    <div class="name-item">
+                        <input type="text" name="age" placeholder="Age" />
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p>Experience<span class="required"></span></p>
+                    <div class="name-item">
+                        <input type="text" name="workout_experience" placeholder="Experience" />
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p>Workout Time<span class="required"></span></p>
+                    <div class="name-item">
+                        <input type="text" name="workout_time" placeholder="Workout Time" />
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p>Weight<span class="required"></span></p>
+                    <div class="name-item">
+                        <input type="text" name="weight" placeholder="Weight" />
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p>Height<span class="required"></span></p>
+                    <div class="name-item">
+                        <input type="text" name="height" placeholder="Height" />
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p>Bmi<span class="required"></span></p>
+                    <div class="name-item">
+                        <input type="text" name="bmi" placeholder="Bmi" />
+                    </div>
+                </div>
+
+                <div class="item">
+                    <p>Gender<span class="required"></span></p>
+                    <select name="gender" id="gender">
+                <option value="" selected hidden>Select Family</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+                </div>
+
+
+
+                <div class="item">
+                    <p>Goal<span class="required"></span></p>
+                    <select name="fitness_goal" id="fitness_goal">
+                    <option value="General Health">General Health</option>
+                    <option value="Weight Gain">Weight Gain</option>
+                    <option value="Muscle Gain">Muscle Gain</option>
+                    <option value="Weight Loss">Weight Loss</option>
+                 </select>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="button">
+                    <input type="submit" value="Predict Sales">
+                </div>
+                <div class="predVal">
+                    {% if pred !=0 %}
+                    <p>
+                        WORKOUT: {{pred}}
+                    </p>
+
+                    {%endif%}
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
